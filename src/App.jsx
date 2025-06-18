@@ -21,40 +21,42 @@ const App = () => {
         <Route
           path="/dashboard"
           element={
-            
-              <Dashboard />
+            <PrivateRoute><Dashboard /></PrivateRoute>
+              
          
           }
         />
         <Route
           path="/inventory"
           element={
-          
-              <Inventory />
+         <PrivateRoute><Inventory /></PrivateRoute> 
+             
            
           }
         />
         <Route
           path="/orders"
           element={
-            
-              <Orders />
-         
+            <PrivateRoute>   <Orders />
+         </PrivateRoute>
+           
           }
         />
         <Route
           path="/tasks"
           element={
+            <PrivateRoute>  <TaskReminder /></PrivateRoute>
         
-              <TaskReminder />
+            
           
           }
         />
         <Route
           path="/suppliers"
           element={
-           
+           <PrivateRoute>
               <Suppliers />
+              </PrivateRoute>
          
           }
         />

@@ -11,7 +11,7 @@ const QuickActions = () => {
 
   return (
     <>
-      <div className="bg-white p-6 rounded shadow text-black">
+      <div className="bg-white p-6 rounded shadow text-black cursor-pointer hover:shadow-lg transition">
         <h2 className="text-xl font-bold text-start mb-4">Quick Actions</h2>
         <div className="flex flex-col gap-2">
           <button

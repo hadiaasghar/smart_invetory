@@ -34,7 +34,7 @@ const InventoryOverview = () => {
   }, []);
 
   return (
-    <div className="bg-white p-6 rounded shadow h-60 ">
+    <div className="bg-white p-6 rounded shadow h-60 cursor-pointer hover:shadow-lg transition">
       <h2 className="text-xl font-bold text-start mb-4">Inventory Overview</h2>
 
       {loading ? (

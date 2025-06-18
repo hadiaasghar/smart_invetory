@@ -3,6 +3,7 @@ import { FaUserCircle } from "react-icons/fa";
 const Header = () => {
   return (
     <header className="bg-white shadow p-4 flex items-center justify-between">
+     <h1 className="text-2xl hidden sm:block font-bold text-black">Smart Inventory</h1>
       {/* Search Bar */}
       <div className="flex-1 mx-8">
         <input
@@ -15,7 +16,7 @@ const Header = () => {
       {/* User Profile */}
       <div className="flex items-center space-x-4">
         <FaUserCircle size={28} className="text-gray-700" />
-        <span className="text-gray-800">Admin</span>
+        <span className="text-gray-800 font-bold">Admin</span>
       </div>
     </header>
   );

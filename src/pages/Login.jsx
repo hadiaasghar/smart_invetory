@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { login } from "../services/auth";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import loginBg from "../assets/background2.jpg";
+
 
 const Login = () => {
   const navigate = useNavigate();
@@ -34,8 +34,8 @@ const Login = () => {
 
   return (
     <div
-      className="min-h-screen flex items-center justify-center bg-cover bg-center"
-      style={{ backgroundImage: `url(${loginBg})` }}
+      className="min-h-screen flex items-center justify-center bg-cover bg-[#F1F5F6] bg-center"
+      
     >
       <ToastContainer />
       <div className="w-full max-w-md bg-white bg-opacity-80 backdrop-blur-sm rounded-2xl shadow-lg p-8">

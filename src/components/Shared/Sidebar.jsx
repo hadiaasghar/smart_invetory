@@ -1,15 +1,19 @@
 import { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import { AiFillHome } from "react-icons/ai";
+import { GoTasklist } from "react-icons/go";
 import {
-  FaHome,
-  FaBox,
-  FaClipboardList,
-  FaTasks,
+
+ 
   FaTruck,
   FaSignOutAlt,
-  FaBars,
+  FaBoxOpen,
+  FaClipboardCheck,
+ 
+
 } from "react-icons/fa";
 import { logout } from "../../services/auth";
+import { FaBars } from "react-icons/fa";
 
 const Sidebar = () => {
   const navigate = useNavigate();
@@ -41,17 +45,17 @@ const Sidebar = () => {
       <div>
         <div className="flex items-center justify-between mb-8">
           {!isCollapsed && (
-            <span className="text-2xl font-bold">Smart Inventory</span>
+            <span className="text-2xl  font-bold">Smart Inventory</span>
           )}
           <button
             onClick={toggleSidebar}
             className="text-xl focus:outline-none"
           >
-            <FaBars />
+            <FaBars size={24} />
           </button>
         </div>
 
-        <nav className="flex flex-col space-y-4">
+        <nav className="flex flex-col space-y-4 ">
           <NavLink
             to="/dashboard"
             className={({ isActive }) =>
@@ -60,7 +64,7 @@ const Sidebar = () => {
               }`
             }
           >
-            <FaHome />
+          <AiFillHome size={24} />
             {!isCollapsed && <span>Dashboard</span>}
           </NavLink>
           <NavLink
@@ -71,7 +75,7 @@ const Sidebar = () => {
               }`
             }
           >
-            <FaBox />
+          <FaBoxOpen size={24} />
             {!isCollapsed && <span>Inventory</span>}
           </NavLink>
           <NavLink
@@ -82,7 +86,7 @@ const Sidebar = () => {
               }`
             }
           >
-            <FaClipboardList />
+           <FaClipboardCheck size={24} />
             {!isCollapsed && <span>Orders</span>}
           </NavLink>
           <NavLink
@@ -93,7 +97,7 @@ const Sidebar = () => {
               }`
             }
           >
-            <FaTasks />
+            <GoTasklist size={24} />
             {!isCollapsed && <span>Task Reminder</span>}
           </NavLink>
           <NavLink
@@ -104,7 +108,7 @@ const Sidebar = () => {
               }`
             }
           >
-            <FaTruck />
+            <FaTruck size={24} />
             {!isCollapsed && <span>Suppliers</span>}
           </NavLink>
         </nav>

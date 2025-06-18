@@ -35,19 +35,7 @@ const Suppliers = () => {
     fetchSuppliers();
   }, []);
 
-  // Handle input change for adding/updating a supplier
-  // const handleChange = (e, isEditing = false) => {
-  //   if (isEditing) {
-  //     setEditSupplier({ ...editSupplier, [e.target.name]: e.target.value });
-  //   } else {
-  //     setNewSupplier({ ...newSupplier, [e.target.name]: e.target.value });
-  //   }
-    
-  //     if (name === "email") {
-  //       const isValidEmail = value.includes("@") && value.endsWith(".com");
-  //       setEmailError(!isValidEmail);
-  //     }
-  // };
+ 
   const handleChange = (e, isEditing = false) => {
   const { name, value } = e.target;
 
@@ -171,14 +159,7 @@ const Suppliers = () => {
                 placeholder="Supplier Name"
                 className="p-2 border rounded-md"
               />
-              {/* <input
-                type="text"
-                name="contact"
-                value={newSupplier.contact}
-                onChange={(e) => handleChange(e)}
-                placeholder="Contact Person"
-                className="p-2 border rounded-md"
-              /> */}
+             
               
             <input
   type="text"
@@ -240,7 +221,7 @@ const Suppliers = () => {
                   <div className="flex gap-2">
                     <button
                       onClick={() => openEditModal(supplier)}
-                      className="bg-yellow-500 text-white px-2 py-1 rounded-md"
+                      className="bg-green-500 text-white px-2 py-1 rounded-md"
                     >
                       Edit
                     </button>

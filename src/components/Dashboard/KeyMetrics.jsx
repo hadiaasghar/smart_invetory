@@ -22,7 +22,7 @@ const KeyMetrics = () => {
   }, []);
 
   return (
-    <div className="bg-white p-6 rounded shadow h-60 text-black">
+    <div className="bg-white p-6 rounded shadow h-60 text-black cursor-pointer hover:shadow-lg transition">
       <h2 className="text-xl font-bold text-start mb-4">Key Metrics</h2>
 
       <div className="space-y-3">

@@ -1,4 +1,3 @@
-// SuppliersLayout.jsx
 import MainLayout from "../layouts/MainLayout";
 import Suppliers from "../components/Suppliers/Suppliers";
 

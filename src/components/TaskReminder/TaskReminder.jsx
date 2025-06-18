@@ -185,7 +185,7 @@ const TaskReminder = () => {
               <h2 className="text-xl font-semibold mb-4">Upcoming Tasks</h2>
               <ul>
                 {tasks
-                  .filter((task) => task.status === "Pending")
+                  .filter((task) => task.status === "Pending" )
                   .map((task) => (
                     <li
                       key={task._id}
@@ -196,7 +196,7 @@ const TaskReminder = () => {
                       <span className="text-gray-500 text-sm">
                         {task.dueDate}
                       </span>
-                      <span className="text-blue-500 text-sm">
+                      <span className="text-white bg-blue-500 rounded-full border py-2 px-6 ">
                         {task.status}
                       </span>
                     </li>
@@ -231,13 +231,16 @@ const TaskReminder = () => {
                           <td className="border-b p-4 text-gray-400 text-sm">
                             {task.dueDate}
                           </td>
-                          <td className="border-b p-4 text-green-500 text-sm">
-                            {task.status}
-                          </td>
+                       
+                          <td className="border-b p-4">
+  <span className="inline-block bg-green-500 text-white text-xs font-medium px-3 py-1 rounded-full">
+    {task.status}
+  </span>
+</td>
                           <td className="border-b p-4">
                             <button
                               onClick={() => confirmDeletion(task._id)}
-                              className="text-red-500 hover:text-red-700"
+                              className="bg-red-500 text-white rounded-full py-1 px-4 hover:text-red-700"
                             >
                               <FaTrashAlt />
                             </button>
