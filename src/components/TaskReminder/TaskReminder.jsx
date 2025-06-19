@@ -148,7 +148,7 @@ const TaskReminder = () => {
 
   return (
     <div className="space-y-8 p-6">
-      <h1 className="text-3xl font-bold  mb-6">Task Reminder</h1>
+      <h1 className="text-3xl font-bold text-white  mb-6">Task Reminder</h1>
 
       {/* Error Message */}
       {error && <p className="text-red-500">{error}</p>}
